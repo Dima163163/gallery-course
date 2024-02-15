@@ -1,0 +1,6 @@
+.link {
+  display: inline-block;
+  font-size: 40px;
+  color: var(--violet);
+  font-weight: 700;
+}

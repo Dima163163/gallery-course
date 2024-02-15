@@ -1,0 +1,72 @@
+.item {
+  position: relative;
+  width: auto;
+  height: 300px;
+}
+
+.link {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.userName {
+  display: inline-block;
+  font-size: 16px;
+  color: var(--violet);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  border: none;
+  background-color: inherit;
+  z-index: 2;
+}
+
+.btnSpan {
+  color: var(--white);
+  position: absolute;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  fill: var(--red);
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.userLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+.userImg {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.time {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: var(--white);
+}

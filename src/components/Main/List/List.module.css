@@ -1,0 +1,15 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 30px;
+}
+
+.end {
+  flex-basis: 100%;
+}
+
+.error {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
