@@ -1,3 +1,11 @@
+.authWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
 .btn {
   display: flex;
   flex-direction: column;
@@ -12,14 +20,11 @@
 
 .container {
   position: relative;
-  display: block;
-  text-align: center;
 }
 
 .logout {
   position: absolute;
   top: 100%;
-  right: 0;
   background-color: var(--orange);
   border: 0;
   color: var(--white);

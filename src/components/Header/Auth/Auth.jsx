@@ -28,7 +28,7 @@ export const Auth = () => {
   return (
     <div className={style.container}>
       {auth.name ? (
-        <>
+        <div className={style.authWrapper}>
           <button className={style.btn} onClick={getOut}>
             <img className={style.img}
               src={auth.img} title={auth.name} alt={`Аватар ${auth.name}`}/>
@@ -39,7 +39,7 @@ export const Auth = () => {
               Выйти
             </button>
           )}
-        </>
+        </div>
       ) : (
         <>
           <Text
