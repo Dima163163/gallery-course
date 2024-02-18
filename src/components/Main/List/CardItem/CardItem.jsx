@@ -51,6 +51,6 @@ export const CardItem = ({photoData}) => {
 
 CardItem.propTypes = {
   photoData: PropTypes.object,
-  classImport: PropTypes.string,
+  classImport: PropTypes.object,
   date: PropTypes.string,
 };

@@ -28,7 +28,7 @@ LikeBlock.propTypes = {
   id: PropTypes.string,
   likes: PropTypes.number,
   statusLike: PropTypes.bool,
-  classNameContainer: PropTypes.object,
-  classNameIcon: PropTypes.object,
-  classNameText: PropTypes.object,
+  classNameContainer: PropTypes.string,
+  classNameIcon: PropTypes.string,
+  classNameText: PropTypes.string,
 };
