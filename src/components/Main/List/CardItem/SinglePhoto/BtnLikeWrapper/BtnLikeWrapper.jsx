@@ -1,11 +1,12 @@
 import style from './BtnLikeWrapper.module.css';
-import {ReactComponent as LikeIcon} from '../img/like.svg';
+// import {ReactComponent as LikeIcon} from '../img/like.svg';
 import {useDispatch, useSelector} from 'react-redux';
 import PropTypes from 'prop-types';
 import {useLike} from '../../../../../../hooks/useLike';
 import {
   fetchChangeLike
 } from '../../../../../../store/like/likeAction';
+import {LikeBlock} from '../../../LikeBlock/LikeBlock';
 
 export const BtnLikeWrapper = ({id, likes, statusLike}) => {
   const token = useSelector(state => state.token.token);
@@ -17,7 +18,7 @@ export const BtnLikeWrapper = ({id, likes, statusLike}) => {
   const disabledStyle = disabledBtn ? `${style.disabled}` : '';
   const styleBtn = isLiked ?
   `${style.btnLike} ${style.btnLikeActive}` : `${style.btnLike}`;
-  console.log('isLiked', isLiked);
+
   const handleLiked = () => {
     if (!token) return;
 
@@ -28,14 +29,14 @@ export const BtnLikeWrapper = ({id, likes, statusLike}) => {
 
   return (
     <div className={style.btnLikeWrapper}>
-      <div className={style.containerLike}>
-        <LikeIcon className={style.likeIcon}/>
-        <span
-          className={style.containerLikeText}
-        >
-          {dataLike?.id === id ? dataLike?.likes : likes}
-        </span>
-      </div>
+      <LikeBlock
+        classNameContainer={style.containerLike}
+        classNameIcon={style.likeIcon}
+        classNameText={style.containerLikeText}
+        id={id}
+        likes={dataLike?.id === id ? dataLike?.likes : likes}
+        statusLike={statusLike}
+      />
       <button
         className={`${styleBtn} ${disabledStyle}`}
         disabled={disabledBtn}
