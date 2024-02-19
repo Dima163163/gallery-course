@@ -26,7 +26,6 @@ export const BtnLikeWrapper = ({id, likes, statusLike}) => {
     dispatch(fetchChangeLike({id, isLiked}));
   };
 
-
   return (
     <div className={style.btnLikeWrapper}>
       <LikeBlock
